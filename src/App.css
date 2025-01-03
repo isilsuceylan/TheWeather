@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Şık ve okunaklı bir font seçimi */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  padding: 20px;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.5); /* Yazıların okunabilirliği için şeffaf bir arka plan */
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
+}
+
+h1, h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Yazıların daha dikkat çekici olması için gölge */
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Hover efekti */
+}
+
+.weather-result {
+  margin-top: 20px;
+}
+
+.about {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.2); /* Hafif şeffaf arka plan */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.text-danger {
+  font-size: 1rem;
+  color: #ff4d4d;
+}
