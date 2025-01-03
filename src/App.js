@@ -9,7 +9,7 @@ function App() {
 
   const fetchWeather = async () => {
     const apiKey = '281e6a789b05fe7ce5129f20ec4b7044'; // API key burada tanımlı
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=tr`;
 
     try {
       const response = await axios.get(url);
