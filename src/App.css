@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif; /* Şık ve okunaklı bir font seçimi */
+  font-family: 'Poppins', sans-serif; /* Modern ve özgün bir font */
+  background-color: #1e1e2f; /* Koyu tema için arka plan */
+  color: #eaeaea; /* Daha açık bir metin rengi */
 }
 
 .app {
@@ -14,67 +16,90 @@ body {
   background-position: center;
   height: 100vh;
   width: 100%;
-  color: white;
   padding: 20px;
+  transition: background-image 0.5s ease-in-out; /* Arka plan geçiş animasyonu */
 }
 
 .container {
-  background: rgba(0, 0, 0, 0.5); /* Yazıların okunabilirliği için şeffaf bir arka plan */
+  background: rgba(40, 40, 60, 0.8);
   border-radius: 15px;
   padding: 30px;
   max-width: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hafif bir gölge efekti */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Daha belirgin bir gölge efekti */
 }
 
-h1, h2 {
+h1 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Yazıların daha dikkat çekici olması için gölge */
+  color: #28a745; /* Daha doğal bir renk */
+  text-shadow: 0 3px 6px rgba(40, 167, 69, 0.4); /* Yazıya derinlik katmak için gölge */
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Yazıların daha dikkat çekici olması için gölge */
 }
 
 p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+  font-size: 1rem;
+  margin: 8px 0;
+  line-height: 1.4;
 }
 
 input {
   padding: 10px;
-  font-size: 1rem;
-  border: none;
+  font-size: 0.9rem;
+  border: 2px solid #28a745;
   border-radius: 10px;
   outline: none;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  color: #eaeaea;
+}
+
+input::placeholder {
+  color: #b0b0b0; /* Placeholder rengi */
 }
 
 button {
-  background-color: #007bff;
+  background: linear-gradient(45deg, #28a745, #34c759);
   color: white;
   font-size: 1rem;
   padding: 10px 20px;
   border: none;
-  border-radius: 10px;
+  border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 10px rgba(40, 167, 69, 0.3);
 }
 
 button:hover {
-  background-color: #0056b3; /* Hover efekti */
+  transform: scale(1.1);
+  box-shadow: 0 7px 15px rgba(40, 167, 69, 0.5);
 }
 
 .weather-result {
   margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about {
   margin-top: 30px;
-  background: rgba(255, 255, 255, 0.2); /* Hafif şeffaf arka plan */
+  background: rgba(255, 255, 255, 0.1);
   padding: 15px;
   border-radius: 10px;
+  font-size: 0.9rem;
+  color: #eaeaea;
+  text-align: center;
 }
 
 .text-danger {
-  font-size: 1rem;
-  color: #ff4d4d;
+  font-size: 0.9rem;
+  color: #ff4d4d; /* Daha doğal bir hata mesajı rengi */
 }

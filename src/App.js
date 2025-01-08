@@ -8,7 +8,7 @@ function App() {
   const [error, setError] = useState('');
 
   const fetchWeather = async () => {
-    const apiKey = '281e6a789b05fe7ce5129f20ec4b7044'; // API key burada tanımlı
+    const apiKey = '281e6a789b05fe7ce5129f20ec4b7044'; 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=tr`;
 
     try {
@@ -21,17 +21,17 @@ function App() {
     }
   };
 
-  const getBackground = () => {
-    if (!weatherData) return "url('/resimler/gokyuzu.jpg')"; // Varsayılan arka plan
-  
-    const weatherMain = weatherData.weather[0].main;
-    const currentHour = new Date().getHours(); // Şu anki saat
-  
-    // Akşam saatleri için güneşli görselini engelle
-    if (currentHour >= 18 && weatherMain === 'Clear') {
-      return "url('/resimler/akşam-gunesli.jpg')"; // Akşam için özel bir güneşli görseli
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      fetchWeather();
     }
-  
+  };
+
+  const getBackground = () => {
+    if (!weatherData) return "url('/resimler/gokyuzu.jpg')";
+
+    const weatherMain = weatherData.weather[0].main;
+
     switch (weatherMain) {
       case 'Rain':
         return "url('/resimler/yagmurlu.jpg')";
@@ -40,6 +40,13 @@ function App() {
       case 'Clear':
         return "url('/resimler/gunesli.jpg')";
       case 'Clouds':
+        return "url('/resimler/bulutlu.jpeg')";
+      case 'Mist':
+      case 'Fog':
+        return "url('/resimler/sisli.jpg')";
+      case 'Wind':
+      case 'Storm':
+      case 'Breeze':
         return "url('/resimler/ruzgarli.jpg')";
       default:
         return "url('/resimler/gokyuzu.jpg')";
@@ -54,12 +61,13 @@ function App() {
       }}
     >
       <div className="container">
-        <h1>Hava Durumu Uygulaması</h1>
+        <h1 style={{ color: 'white' }}>Hava Durumu Uygulaması</h1> {}
         <input
           type="text"
           placeholder="Şehir Adını Giriniz"
           value={city}
           onChange={(e) => setCity(e.target.value)}
+          onKeyPress={handleKeyPress} 
         />
         <button onClick={fetchWeather}>Hava Durumunu Getir</button>
 
@@ -68,10 +76,10 @@ function App() {
         {weatherData && (
           <div className="weather-result">
             <h2>{weatherData.name}</h2>
-            <p>Durum: {weatherData.weather[0].description}</p>
-            <p>Sıcaklık: {weatherData.main.temp}°C</p>
-            <p>Nem: {weatherData.main.humidity}%</p>
-            <p>Rüzgar Hızı: {weatherData.wind.speed} m/s</p>
+            <p>⭐ Durum: {weatherData.weather[0].description}</p> {}
+            <p>🌡️ Sıcaklık: {weatherData.main.temp}°C</p> {}
+            <p>💧 Nem: {weatherData.main.humidity}%</p> {}
+            <p>🌬️ Rüzgar Hızı: {weatherData.wind.speed} m/s</p> {}
           </div>
         )}
 
