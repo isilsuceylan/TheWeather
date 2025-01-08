@@ -1,8 +1,9 @@
+/* Genel Stil */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif; /* Modern ve özgün bir font */
-  background-color: #1e1e2f; /* Koyu tema için arka plan */
-  color: #eaeaea; /* Daha açık bir metin rengi */
+  font-family: 'Poppins', sans-serif;
+  background-color: #1e1e2f;
+  color: #eaeaea;
 }
 
 .app {
@@ -17,7 +18,7 @@ body {
   height: 100vh;
   width: 100%;
   padding: 20px;
-  transition: background-image 0.5s ease-in-out; /* Arka plan geçiş animasyonu */
+  transition: background-image 0.5s ease-in-out;
 }
 
 .container {
@@ -25,21 +26,21 @@ body {
   border-radius: 15px;
   padding: 30px;
   max-width: 400px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Daha belirgin bir gölge efekti */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #28a745; /* Daha doğal bir renk */
-  text-shadow: 0 3px 6px rgba(40, 167, 69, 0.4); /* Yazıya derinlik katmak için gölge */
+  color: #28a745;
+  text-shadow: 0 3px 6px rgba(40, 167, 69, 0.4);
 }
 
 h2 {
   font-size: 1.6rem;
   margin-bottom: 15px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Yazıların daha dikkat çekici olması için gölge */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
@@ -61,7 +62,7 @@ input {
 }
 
 input::placeholder {
-  color: #b0b0b0; /* Placeholder rengi */
+  color: #b0b0b0;
 }
 
 button {
@@ -90,16 +91,77 @@ button:hover {
 }
 
 .about {
-  margin-top: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 15px;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
   border-radius: 10px;
-  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   color: #eaeaea;
+  font-size: 1rem;
   text-align: center;
+  line-height: 1.4;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .about-btn {
+    font-size: 0.9rem;
+    padding: 12px 24px;
+  }
+
+  .about {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  .about-btn {
+    font-size: 0.8rem;
+    padding: 10px 20px;
+  }
+
+  .about {
+    font-size: 0.8rem;
+    padding: 12px;
+  }
 }
 
 .text-danger {
   font-size: 0.9rem;
-  color: #ff4d4d; /* Daha doğal bir hata mesajı rengi */
+  color: #ff4d4d;
 }

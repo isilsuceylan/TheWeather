@@ -47,7 +47,7 @@ function App() {
       case 'Wind':
       case 'Storm':
       case 'Breeze':
-        return "url('/resimler/ruzgarli.jpg')";
+        return "url('/resimler/ruzgarli.png')";
       default:
         return "url('/resimler/gokyuzu.jpg')";
     }
@@ -84,8 +84,10 @@ function App() {
         )}
 
         <div className="about">
-          <h3>Hakkında</h3>
+          <h3>HAKKINDA</h3>
           <p>BTE311 WEB TABANLI PROGRAMLAMA DERSİ İÇİN GELİŞTİRİLMİŞTİR.</p>
+          <p>TASARIMCI: IŞILSU CEYLAN</p>
+          <p>NUMARA: 222078004</p>
         </div>
       </div>
     </div>
