@@ -87,7 +87,7 @@ function App() {
           </div>
         )}
 
-        {/* hakkında butonu */}
+        {/* hakkında buton */}
         <button
           onClick={() => setShowAbout(!showAbout)} 
           className="btn btn-about"
